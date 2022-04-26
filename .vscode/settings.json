@@ -1,0 +1,12 @@
+{
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "[terraform]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[terraform-vars]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    }
+}
