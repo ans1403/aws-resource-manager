@@ -7,6 +7,10 @@ locals {
   }
 }
 
+module "iam" {
+  source = "./module/iam"
+}
+
 module "vpc" {
   source     = "./module/vpc"
   cidr_block = local.vpc.cidr_block
