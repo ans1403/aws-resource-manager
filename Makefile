@@ -10,7 +10,7 @@ MAKEFLAGS += --no-print-directory
 
 # Docker Constants
 
-IMAGE       := hashicorp/terraform:1.1.9
+IMAGE       := hashicorp/terraform:1.2.5
 WORKING_DIR := /usr/local/aws-resource-manager
 ENV_FILE    := ./.env
 
