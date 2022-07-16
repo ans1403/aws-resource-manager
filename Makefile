@@ -27,7 +27,7 @@ init:
 			-backend=true \
 			-backend-config='access_key=${AWS_ACCESS_KEY}' \
 			-backend-config='secret_key=${AWS_SECRET_ACCESS_KEY}' \
-			-backend-config='region=${S3_REGION}' \
+			-backend-config='region=${AWS_DEFAULT_REGION}' \
 			-backend-config='bucket=${S3_TFSTATE_BUCKET}' \
 			-backend-config='key=${S3_TFSTATE_KEY}'
 

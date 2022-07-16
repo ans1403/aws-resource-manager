@@ -1,8 +1,8 @@
 locals {
   cluster_name = "my-ecs-cluster"
-  repository_names = [
-    "test1",
-    "test2",
+  repositories = [
+    { name = "test1" },
+    { name = "test2" },
   ]
 }
 
@@ -15,7 +15,8 @@ resource "aws_ecs_cluster" "main" {
 # ===== ECR =====
 
 resource "aws_ecr_repository" "main" {
-  name = [for name in local.repository_names : name]
+  for_each = { for i in local.repositories : i.name => i }
+  name     = each.value.name
 
   image_scanning_configuration {
     scan_on_push = true
