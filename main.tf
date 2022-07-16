@@ -2,9 +2,6 @@ locals {
   vpc = {
     cidr_block = "10.0.0.0/16"
   }
-  ecr = {
-    image_name = "test"
-  }
 }
 
 module "iam" {
@@ -21,7 +18,6 @@ module "security_group" {
   vpc_id = module.vpc.id
 }
 
-module "ecr" {
-  source     = "./module/ecr"
-  image_name = local.ecr.image_name
+module "ecs_cluster" {
+  source = "./module/ecs_cluster"
 }
