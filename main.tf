@@ -18,6 +18,6 @@ module "security_group" {
   vpc_id = module.vpc.id
 }
 
-module "ecs_cluster" {
-  source = "./module/ecs_cluster"
+module "ecs" {
+  source = "./module/ecs"
 }
